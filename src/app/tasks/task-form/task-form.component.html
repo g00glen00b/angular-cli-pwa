@@ -1,0 +1,20 @@
+<form [formGroup]="form">
+  <div class="form-group">
+    <mat-icon>edit</mat-icon>
+    <mat-form-field appearance="outline">
+      <mat-label>Description</mat-label>
+      <input type="text" matInput formControlName="description" />
+    </mat-form-field>
+  </div>
+  <div class="form-group">
+    <mat-icon>calendar_today</mat-icon>
+    <mat-form-field appearance="outline">
+      <mat-label>Due date</mat-label>
+      <input matInput [matDatepicker]="duePicker" formControlName="due" />
+      <mat-datepicker-toggle matSuffix [for]="duePicker"></mat-datepicker-toggle>
+      <mat-datepicker #duePicker></mat-datepicker>
+    </mat-form-field>
+  </div>
+  <button mat-raised-button color="primary" (click)="onSave()" [disabled]="form.invalid" type="submit">{{saveLabel}}</button>
+  <button mat-button color="primary" (click)="onCancel()" type="button">Cancel</button>
+</form>

@@ -1,0 +1,29 @@
+[mat-fab] {
+  position: fixed;
+  z-index: 20;
+  right: 30px;
+  bottom: 30px;
+}
+
+mat-sidenav-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #EEEEEE;
+}
+
+mat-sidenav-content, mat-sidenav {
+  padding: 100px 10px 10px;
+}
+
+mat-sidenav {
+  width: 450px;
+}
+
+@media (max-width: 599px) {
+ mat-sidenav {
+   width: 100%;
+ }
+}

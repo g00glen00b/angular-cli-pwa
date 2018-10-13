@@ -1,0 +1,13 @@
+<mat-card>
+  <mat-card-content>
+    <mat-list>
+      <h3 mat-subheader>Your tasks</h3>
+      <mat-list-item *ngFor="let task of tasks">
+        <app-task-list-item [task]="task" (change)="change.emit($event)"></app-task-list-item>
+      </mat-list-item>
+      <mat-list-item *ngIf="tasks == null || tasks.length === 0">
+        You're all done!
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,5 @@
+<div [class.completed]="completed">
+  <mat-checkbox [checked]="completed" (change)="changeCompleted()">{{task?.description}}</mat-checkbox>
+  <span class="filler"></span>
+  <time [class.overdue]="overdue">{{task.due | date:'MMM dd'}}</time>
+</div>

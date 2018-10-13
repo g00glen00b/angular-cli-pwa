@@ -1,0 +1,19 @@
+.form-group {
+  width: 100%;
+  display: flex;
+
+  mat-form-field {
+    flex-grow: 1;
+  }
+
+  mat-icon {
+    margin-top: 20px;
+    width: 40px;
+  }
+}
+
+button {
+  text-transform: uppercase;
+  margin-left: auto;
+  float: right;
+}

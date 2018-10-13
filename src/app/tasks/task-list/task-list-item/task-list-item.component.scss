@@ -1,0 +1,27 @@
+@import "../../../../theme.scss";
+
+:host {
+  width: 100%;
+}
+
+div {
+  width: 100%;
+  display: flex;
+
+  &.completed {
+    text-decoration: line-through;
+  }
+}
+
+.filler {
+  flex: 1 1 auto;
+}
+
+time {
+  color: #616161;
+  font-size: .9em;
+
+  &.overdue {
+    color: mat-color($custom-warn);
+  }
+}

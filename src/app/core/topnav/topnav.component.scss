@@ -1,0 +1,18 @@
+@import "../../../theme.scss";
+
+mat-toolbar {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  a {
+    text-decoration: none;
+    color: mat-color($custom-primary, default-contrast);
+
+    img {
+      width: 30px;
+    }
+  }
+}

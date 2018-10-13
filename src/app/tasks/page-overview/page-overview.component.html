@@ -1,0 +1,9 @@
+<mat-sidenav-container>
+  <mat-sidenav-content>
+    <app-task-list [tasks]="tasks" (change)="updateTask($event)"></app-task-list>
+    <a [routerLink]="['/tasks', {outlets: {side: ['create']}}]" mat-fab><mat-icon>add</mat-icon></a>
+  </mat-sidenav-content>
+  <mat-sidenav mode="over" [opened]="openSidebar" position="end" disableClose="true">
+    <router-outlet name="side" (activate)="openSidebar = true" (deactivate)="openSidebar = false"></router-outlet>
+  </mat-sidenav>
+</mat-sidenav-container>
